@@ -1,0 +1,62 @@
+.flex-display(){
+	display: -webkit-box;   // OLD: Safari,  iOS, Android browser, older WebKit browsers. 
+	display: -moz-box;      // OLD: Firefox [buggy]
+	display: -ms-flexbox;   // MID: IE 10 
+	display: -webkit-flex;  // NEW, Chrome 21+ 
+	display: flex;          // NEW: Opera 12.1, Firefox 22+ 
+}
+
+.flex-align(@alignment){
+	// Options: center
+	-webkit-box-align: @alignment; 
+	-moz-box-align: @alignment; 
+	-ms-flex-align: @alignment;
+	-webkit-align-items: @alignment;
+	align-items: @alignment;
+}
+
+.flex-justify(@justification){
+	//Options: 
+	//Center
+	//
+	-webkit-box-pack: @justification; 
+	-moz-box-pack: @justification; 
+	-ms-flex-pack: @justification; 
+	-webkit-justify-content: @justification;
+	justify-content: @justification;
+}
+
+.flex-unit(@unit){
+	-webkit-box-flex: @unit;
+	-moz-box-flex: @unit;
+	-ms-box-flex: @unit;
+	-webkit-flex: @unit;
+	flex: @unit;
+}
+
+.flex-direction(@direction: row){
+	// column
+	// row
+	-webkit-flex-flow: @direction;
+	-moz-flex-flow: @direction;
+	-ms-flex-flow: @direction;
+	flex-flow: @direction;
+}
+
+.flex-wrap(@wrap:nowrap){
+	-webkit-flex-flow: @wrap;
+	-moz-flex-flow: @wrap;
+	-ms-flex-flow: @wrap;
+	flex-flow: @wrap;
+}
+
+.flex-order(@order){
+	-webkit-box-ordinal-group: @order;
+	-moz-box-ordinal-group: @order;
+	-ms-box-ordinal-group: @order;
+	-ms-flex-order: @order;
+	-webkit-order: @order;
+	-moz-order: @order;
+	-ms-order: @order;
+	order: @order;
+}
