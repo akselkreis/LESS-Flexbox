@@ -1,4 +1,8 @@
+// Source: http://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+
 .flex-display(){
+	// display: other values | flex | inline-flex;
 	display: -webkit-box;   // OLD: Safari,  iOS, Android browser, older WebKit browsers. 
 	display: -moz-box;      // OLD: Firefox [buggy]
 	display: -ms-flexbox;   // MID: IE 10 
@@ -7,7 +11,7 @@
 }
 
 .flex-align(@alignment){
-	// Options: center
+	// align-items: flex-start | flex-end | center | baseline | stretch
 	-webkit-box-align: @alignment; 
 	-moz-box-align: @alignment; 
 	-ms-flex-align: @alignment;
@@ -15,20 +19,61 @@
 	align-items: @alignment;
 }
 
-// align content
+.flex-align-content(@alignment){
+	// align-content: flex-start | flex-end | center | space-between | space-around | stretch
+	-webkit-align-content: @alignment;
+	-moz-align-content: @alignment;
+	-ms-align-content: @alignment;
+	-webkit-align-content: @alignment;
+	align-content: @alignment;
+}
 
-// grow
+.flex-grow(@grow: 0){
+	// flex-grow: <number> (default 0)
+	-webkit-flex-grow: @grow;
+	-moz-flex-grow: @grow;
+	-ms-flex-grow: @grow;
+	-webkit-flex-grow: @grow;
+	flex-grow: @grow;
+}
 
-// shrink
+.flex-shrink(@shrink: 1){
+	// flex-shrink: <number> (default 1)
+	-webkit-flex-shrink: @shrink;
+	-moz-flex-shrink: @shrink;
+	-ms-flex-shrink: @shrink;
+	-webkit-flex-shrink: @shrink;
+	flex-shrink: @shrink;
+}
 
-//flex-basis
+.flex-basis(@basis: auto){
+	// flex-basis: <length> | auto (default auto)
+	-webkit-flex-basis: @basis;
+	-moz-flex-basis: @basis;
+	-ms-flex-basis: @basis;
+	-webkit-flex-basis: @basis;
+	flex-basis: @basis;
+}
 
-// align-self
+.flex-none{
+	-webkit-flex: none;
+	-moz-flex: none;
+	-ms-flex: none;
+	-webkit-flex: none;
+	flex: none;
+}
+
+.flex-align-self(@align: auto){
+	// align-self: auto | flex-start | flex-end | center | baseline | stretch
+	-webkit-align-self: @align;
+	-moz-align-self: @align;
+	-ms-align-self: @align;
+	-webkit-align-self: @align;
+	align-self: @align;
+}
 
 .flex-justify(@justification){
-	//Options: 
-	//Center
-	//
+	// justify-content: flex-start | flex-end | center | space-between | space-around
 	-webkit-box-pack: @justification; 
 	-moz-box-pack: @justification; 
 	-ms-flex-pack: @justification; 
@@ -45,15 +90,15 @@
 }
 
 .flex-direction(@direction: row){
-	// column
-	// row
+	//flex-direction: row | row-reverse | column | column-reverse
 	-webkit-flex-direction: @direction;
 	-moz-flex-direction: @direction;
 	-ms-flex-direction: @direction;
 	flex-direction: @direction;
 }
 
-.flex-wrap(@wrap:nowrap){
+.flex-wrap(@wrap: nowrap){
+	//flex-wrap: nowrap | wrap | wrap-reverse
 	-webkit-flex-wrap: @wrap;
 	-moz-flex-wrap: @wrap;
 	-ms-flex-wrap: @wrap;
@@ -61,6 +106,7 @@
 }
 
 .flex-order(@order){
+	// order: <integer>
 	-webkit-box-ordinal-group: @order;
 	-moz-box-ordinal-group: @order;
 	-ms-box-ordinal-group: @order;
